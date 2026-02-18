@@ -150,9 +150,9 @@ Downloads all votes and opinions as a JSON file for backup or analysis.
 ### Changing Colors
 
 Edit the gradient colors in `styles.css`:
-- Header gradient: Line 20-21
-- Vote buttons: Line 142
-- Percentage bars: Line 116
+- Header gradient: Line 18 (background property)
+- Vote buttons: Line 164 (background property)
+- Percentage bars: Line 145 (background property)
 
 ### Adding More Candidates
 
