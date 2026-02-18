@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Opinion Battle - Vote and share your opinion on India's political leaders">
+    <meta name="keywords" content="opinion, poll, voting, politics, India">
+    <meta name="author" content="Opinion Battle">
+    <title>Opinion Battle - Modi vs Gandhi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Opinion Battle</h1>
+        <p class="tagline">Your Voice Matters - Cast Your Vote</p>
+    </header>
+
+    <main>
+        <!-- Voting Section -->
+        <section class="voting-section">
+            <h2>Who Do You Support?</h2>
+            
+            <div class="candidates-container">
+                <!-- Candidate 1: Narendra Modi -->
+                <div class="candidate-card" id="modi-card">
+                    <div class="candidate-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #FF9933, #138808);">NM</div>
+                    </div>
+                    <h3>Narendra Modi</h3>
+                    <p class="designation">Prime Minister of India</p>
+                    
+                    <div class="vote-stats">
+                        <div class="vote-count">
+                            <span class="count-number" id="modi-votes">0</span>
+                            <span class="count-label">Votes</span>
+                        </div>
+                        <div class="vote-percentage">
+                            <div class="percentage-bar">
+                                <div class="percentage-fill" id="modi-percentage-fill"></div>
+                            </div>
+                            <span class="percentage-text" id="modi-percentage">0%</span>
+                        </div>
+                    </div>
+                    
+                    <button class="vote-btn" id="vote-modi" data-candidate="modi">
+                        <span>Vote for Modi</span>
+                    </button>
+                </div>
+
+                <!-- Candidate 2: Rahul Gandhi -->
+                <div class="candidate-card" id="gandhi-card">
+                    <div class="candidate-image">
+                        <div class="image-placeholder" style="background: linear-gradient(135deg, #19AAED, #0C4B86);">RG</div>
+                    </div>
+                    <h3>Rahul Gandhi</h3>
+                    <p class="designation">Member of Parliament</p>
+                    
+                    <div class="vote-stats">
+                        <div class="vote-count">
+                            <span class="count-number" id="gandhi-votes">0</span>
+                            <span class="count-label">Votes</span>
+                        </div>
+                        <div class="vote-percentage">
+                            <div class="percentage-bar">
+                                <div class="percentage-fill" id="gandhi-percentage-fill"></div>
+                            </div>
+                            <span class="percentage-text" id="gandhi-percentage">0%</span>
+                        </div>
+                    </div>
+                    
+                    <button class="vote-btn" id="vote-gandhi" data-candidate="gandhi">
+                        <span>Vote for Gandhi</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="total-votes">
+                Total Votes: <span id="total-votes">0</span>
+            </div>
+
+            <div id="vote-message" class="vote-message"></div>
+        </section>
+
+        <!-- Opinion Section -->
+        <section class="opinion-section">
+            <h2>Share Your Opinion</h2>
+            
+            <div class="opinion-form-container">
+                <form id="opinion-form">
+                    <div class="form-group">
+                        <label for="opinion-name">Your Name (Optional)</label>
+                        <input type="text" id="opinion-name" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="opinion-support">You Support</label>
+                        <select id="opinion-support" required>
+                            <option value="">Select a leader</option>
+                            <option value="modi">Narendra Modi</option>
+                            <option value="gandhi">Rahul Gandhi</option>
+                            <option value="neutral">Neutral</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="opinion-text">Your Opinion</label>
+                        <textarea id="opinion-text" rows="4" placeholder="Share your thoughts..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-opinion-btn">Submit Opinion</button>
+                </form>
+            </div>
+
+            <div class="opinions-container" id="opinions-container">
+                <h3>Recent Opinions</h3>
+                <div id="opinions-list" class="opinions-list">
+                    <!-- Opinions will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Opinion Battle. This is a neutral platform for expressing opinions.</p>
+        <p class="disclaimer">Disclaimer: This is an independent opinion poll and not affiliated with any political party.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
