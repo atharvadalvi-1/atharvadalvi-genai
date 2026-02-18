@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namo vs Rahul Gandhi — Opinion Battle</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --muted: #94a3b8;
+        --text: #e5e7eb;
+        --accent: #38bdf8;
+        --accent-2: #f59e0b;
+        --border: #1f2937;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 20% -10%, #1e293b, transparent),
+          var(--bg);
+      }
+
+      header {
+        padding: 48px 20px 24px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+
+      header p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px 60px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+        margin-top: 26px;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 20px;
+        min-height: 170px;
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      .poll {
+        margin-top: 28px;
+        background: linear-gradient(180deg, rgba(56, 189, 248, 0.1), transparent);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 24px;
+      }
+
+      .poll h2 {
+        margin: 0 0 6px;
+      }
+
+      .poll p {
+        color: var(--muted);
+        margin: 0 0 16px;
+      }
+
+      .poll-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .poll button {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: transform 0.15s ease, border 0.15s ease, background 0.15s ease;
+      }
+
+      .poll .namo {
+        background: rgba(56, 189, 248, 0.15);
+        color: #bae6fd;
+        border-color: rgba(56, 189, 248, 0.4);
+      }
+
+      .poll .rahul {
+        background: rgba(245, 158, 11, 0.15);
+        color: #fde68a;
+        border-color: rgba(245, 158, 11, 0.4);
+      }
+
+      .poll .neutral {
+        background: rgba(148, 163, 184, 0.12);
+        color: #e2e8f0;
+        border-color: rgba(148, 163, 184, 0.3);
+      }
+
+      .poll button:hover {
+        transform: translateY(-2px);
+      }
+
+      .grid {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .grid .item {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px;
+        background: rgba(15, 23, 42, 0.7);
+      }
+
+      .item h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+
+      .item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .note {
+        margin-top: 14px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Namo vs Rahul Gandhi — Opinion Battle</h1>
+      <p>A neutral space to compare viewpoints and share your take respectfully.</p>
+    </header>
+
+    <main class="container">
+      <div class="cards">
+        <section class="card">
+          <span class="tag">About</span>
+          <h3>Two leaders, many perspectives</h3>
+          <p class="note">
+            This page presents a balanced format for discussion. It does not endorse
+            any individual or party.
+          </p>
+        </section>
+        <section class="card">
+          <span class="tag">How to use</span>
+          <h3>Compare, then decide</h3>
+          <p class="note">
+            Review the categories below, then choose the option that best reflects
+            your personal opinion.
+          </p>
+        </section>
+        <section class="card">
+          <span class="tag">Respect</span>
+          <h3>Keep it civil</h3>
+          <p class="note">
+            Focus on ideas and policies. Avoid personal attacks or misinformation.
+          </p>
+        </section>
+      </div>
+
+      <section class="poll">
+        <h2>Where do you stand?</h2>
+        <p>Pick one option. Your selection is private and not stored.</p>
+        <div class="poll-buttons">
+          <button class="namo" type="button">Leaning toward Namo</button>
+          <button class="rahul" type="button">Leaning toward Rahul Gandhi</button>
+          <button class="neutral" type="button">Undecided / Neutral</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="item">
+          <h4>Leadership style</h4>
+          <p>How do you view their approach to decision‑making and governance?</p>
+        </div>
+        <div class="item">
+          <h4>Economic vision</h4>
+          <p>Which policy direction do you believe supports growth and equity?</p>
+        </div>
+        <div class="item">
+          <h4>Social priorities</h4>
+          <p>Which agenda aligns more with your values on social issues?</p>
+        </div>
+        <div class="item">
+          <h4>Global outlook</h4>
+          <p>Whose foreign policy stance feels more credible to you?</p>
+        </div>
+        <div class="item">
+          <h4>Transparency</h4>
+          <p>Which leader do you find more accountable and open?</p>
+        </div>
+        <div class="item">
+          <h4>Future plans</h4>
+          <p>Which roadmap looks more realistic for the next five years?</p>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          This is a neutral opinion prompt page. Consider multiple sources before
+          forming conclusions.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
